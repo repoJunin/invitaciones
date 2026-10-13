@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#08283d" />
+    <meta name="description" content="Invitación a la Sesión solemne del GAD Municipal del Cantón Junín."/>
+    <title>Invitación | GAD Municipal de Junín</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Great+Vibes&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet"/>
+    <link link rel="stylesheet" href="estilo.css">    
+  </head>
+  <body>
+    <main class="card">
+      <div class="content">
+        <img class="logo" src="/assets/logo2.png" alt="Junín, Alcaldía Ciudadana"/>
+        <h1 class="institution">Gobierno Autónomo<br />Descentralizado Municipal<br />del Cantón Junín</h1>
+        <div class="divider" aria-hidden="true"></div>
+        <p class="eyebrow">Tiene el honor de invitarle a:</p>
+        <h2 class="title">Desfile Cívico<br />y<br>Sesión Solemne</h2>
+        <p class="copy">
+          Actos conmemorativos por la cantonización de Junín, en los que
+          rendiremos homenaje a la historia, identidad y progreso de nuestra
+          tierra. Su distinguida presencia dará realce a este trascendental
+          acontecimiento.
+        </p>
+        <!-- Reproductor del Himno a Junín -->
+  <div class="hymn-player">
+    <audio id="junin-hymn" preload="auto" autoplay loop>
+  <source src="assets/audio/himno_a_junin.mp3" type="audio/mpeg">
+  Tu navegador no admite la reproducción de audio.
+</audio>
+
+    <button
+      type="button"
+      class="hymn-play-button"
+      id="hymn-play-button"
+      aria-label="Reproducir Himno a Junín"
+      aria-pressed="false"
+    >
+      <!-- Icono reproducir -->
+      <svg id="hymn-play-icon" viewBox="0 0 24 24"
+        fill="none" stroke="currentColor" stroke-width="1.8"
+        stroke-linecap="round" stroke-linejoin="round"
+        aria-hidden="true">
+        <polygon points="8 5 19 12 8 19 8 5"></polygon>
+      </svg>
+
+      <!-- Icono pausar -->
+      <svg id="hymn-pause-icon" viewBox="0 0 24 24"
+        fill="none" stroke="currentColor" stroke-width="1.8"
+        stroke-linecap="round" stroke-linejoin="round"
+        aria-hidden="true" hidden>
+        <path d="M9 5v14M15 5v14"></path>
+      </svg>
+    </button>
+
+    <div class="hymn-info">
+      <span class="hymn-title">Himno a Junín</span>
+      <span class="hymn-subtitle" id="hymn-status">
+        Escuchar el himno
+      </span>
+    </div>
+
+    <span class="hymn-note" aria-hidden="true">♪</span>
+  </div>
+<section class="events-section" aria-label="Agenda de actos">
+
+  <header class="events-header">
+    <span class="date-label">AGENDA DE ACTOS</span>
+  </header>
+
+  <div class="events-grid">
+
+    <!-- EVENTO 1: DESFILE CÍVICO -->
+    <article class="event-card parade-card">
+      <div class="event-card-header">
+        <div class="icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m5 4 7 7m7-7-7 7"/>
+            <path d="M6 12c0-1.7 12-1.7 12 0v6c0 2-12 2-12 0z"/>
+            <path d="M6 12c0 2 12 2 12 0M8 20v1m8-1v1"/>
+          </svg>
+        </div>
+
+        <div class="event-heading">
+          <span class="event-label">PRIMER ACTO</span>
+          <h3>Desfile Cívico</h3>
+          <p class="event-date">Sábado, 7 de noviembre de 2026</p>
+          <span class="time">08:00 a. m.</span>
+        </div>
+      </div>
+
+      <div class="event-divider"></div>
+
+      <section class="event-countdown"
+        aria-label="Cuenta regresiva para el desfile cívico">
+        <h4>¿Cuánto falta para el desfile?</h4>
+
+        <div class="count-grid" aria-hidden="true">
+          <div class="count-unit">
+            <strong id="parade-days">00</strong>
+            <span>Días</span>
+          </div>
+          <div class="count-unit">
+            <strong id="parade-hours">00</strong>
+            <span>Horas</span>
+          </div>
+          <div class="count-unit">
+            <strong id="parade-minutes">00</strong>
+            <span>Minutos</span>
+          </div>
+          <div class="count-unit">
+            <strong id="parade-seconds">00</strong>
+            <span>Segundos</span>
+          </div>
+        </div>
+
+        <p class="count-message" id="parade-message" role="status"></p>
+      </section>
+    </article>
+
+    <!-- EVENTO 2: SESIÓN SOLEMNE -->
+    <article class="event-card session-card">
+      <div class="event-card-header">
+        <div class="icon orange">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9 12 4l9 5M4 20h16M6 9v9m4-9v9m4-9v9m4-9v9M3 20h18"/>
+          </svg>
+        </div>
+
+        <div class="event-heading">
+          <span class="event-label">SEGUNDO ACTO</span>
+          <h3>Sesión Solemne</h3>
+          <p class="event-date">Domingo, 8 de noviembre de 2026</p>
+          <span class="time">14:00 (2:00 p. m.)</span>
+        </div>
+      </div>
+
+      <div class="event-divider"></div>
+      <div class="event-venue">
+        <div class="icon green">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/>
+            <circle cx="12" cy="10" r="2.5"/>
+          </svg>
+        </div>
+
+        <div>
+          <strong>Lugar de la sesión solemne</strong>
+          <span class="venue">Unidad Educativa María Mercedes</span>
+        </div>
+      </div>
+
+      <a class="map"
+        href="https://maps.app.goo.gl/nH2J42d12wfucwiLA"
+        target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/>
+          <circle cx="12" cy="10" r="2.5"/>
+        </svg>
+        Ubicación de la sesión solemne
+      </a>
+
+      <div class="event-divider"></div>
+
+      <section class="event-countdown"
+        aria-label="Cuenta regresiva para la sesión solemne">
+        <h4>¿Cuánto falta para la sesión?</h4>
+
+        <div class="count-grid" aria-hidden="true">
+          <div class="count-unit">
+            <strong id="session-days">00</strong>
+            <span>Días</span>
+          </div>
+          <div class="count-unit">
+            <strong id="session-hours">00</strong>
+            <span>Horas</span>
+          </div>
+          <div class="count-unit">
+            <strong id="session-minutes">00</strong>
+            <span>Minutos</span>
+          </div>
+          <div class="count-unit">
+            <strong id="session-seconds">00</strong>
+            <span>Segundos</span>
+          </div>
+        </div>
+
+        <p class="count-message" id="session-message" role="status"></p>
+      </section>
+    </article>
+
+  </div>
+</section>
+        <p class="closing">¡Será un honor contar con su presencia!</p>
+        <p class="footer">Gobierno Autónomo Descentralizado Municipal del Cantón Junín</p>
+      </div>
+    </main>
+    <script src="main.js"></script>
+  </body>
+</html>
